@@ -14,7 +14,8 @@ export class EmpleadoComponent implements OnInit {
   apellido="Escobar";
   //private edad=18;
   edad=18;
-  empresa="Js SA";
+  //empresa="Js SA";
+  ciudad="Madrid";
 
 
   //si modificamos el acceso a la propiedad podems hacer metodos getters
@@ -22,6 +23,20 @@ export class EmpleadoComponent implements OnInit {
   getEdad(){
     return this.edad;
   }
+
+ llamaEmpresa(value:String){
+
+ }
+
+ habilitacionCuadro=false; //con esto creamos el binding
+
+ usuarioRegistrado=false; //checkbox activado o desactivado
+
+ getRegistroUsuario(){
+
+  this.usuarioRegistrado=true;
+ }
+
   constructor() { }
 
   ngOnInit(): void {
