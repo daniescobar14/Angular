@@ -10,6 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpleadoComponent implements OnInit {
 
+  nombre="Juan";
+  apellido="Escobar";
+  //private edad=18;
+  edad=18;
+  empresa="Js SA";
+
+
+  //si modificamos el acceso a la propiedad podems hacer metodos getters
+
+  getEdad(){
+    return this.edad;
+  }
   constructor() { }
 
   ngOnInit(): void {
