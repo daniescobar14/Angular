@@ -32,9 +32,27 @@ export class EmpleadoComponent implements OnInit {
 
  usuarioRegistrado=false; //checkbox activado o desactivado
 
+ textoDeRegistro="No hay nadie registrado";
+
  getRegistroUsuario(){
 
-  this.usuarioRegistrado=true;
+  this.usuarioRegistrado=false;
+ }
+
+ //hacemos una funcion que muestre una ventana emergente
+
+ setUsuarioRegistrado(event:Event){
+  //alert("El usuario se acaba de registrar")
+  //this.textoDeRegistro="El usuario esta registrado";
+
+  //alert(event.target); //target nos va a enseñar el objeto del evento
+
+  if ((<HTMLInputElement>event.target).value=="Si"){
+    this.textoDeRegistro="Usuario registrado";
+
+  } else {
+    this.textoDeRegistro="Usuario no registrado";
+  }
  }
 
   constructor() { }
